@@ -8,9 +8,9 @@ worth the trouble.
 
 ## Roadmap to v0.1.0
 
-- [ ] Find `link` and `script` tags
-- [ ] Find the tags contents
-- [ ] Replace the tags contents
+- [x] Find `link` and `script` tags
+- [x] Find the tags contents
+- [x] Replace the tags contents
 - [ ] Add a CLI
 
 ## Roadmap for the future
