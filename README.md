@@ -16,3 +16,5 @@ worth the trouble.
 ## Roadmap for the future
 
 - [ ] Add an option to look up for minified/unminified files
+- [ ] Fetch remote files
+- [ ] Batch process HTML files
