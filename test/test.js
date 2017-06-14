@@ -16,7 +16,7 @@ describe('helpers', function() {
 describe('levin', function() {
   describe('#inline()', function() {
     it('inlines CSS and JS into HTML', function(done) {
-      levin.inline('test/fixtures/base.html', 'test/fixtures', '', function(result) {
+      levin.inline('test/fixtures/base.html', 'test/fixtures', function(result) {
         helpers.readFile('test/fixtures/base-inlined.html', function(inlinedFile) {
           assert.equal(result, inlinedFile);
           done();

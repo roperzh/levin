@@ -4,11 +4,10 @@ var levin = {};
 
 module.exports = levin;
 
-levin.inline = function(htmlFile, assetPath, htmlPath, callback) {
-  var htmlPath = htmlPath || '';
+levin.inline = function(htmlFile, assetPath, callback) {
   var assetPath = assetPath || '';
 
-  helpers.readFile(htmlPath + htmlFile, function(htmlContents) {
+  helpers.readFile(htmlFile, function(htmlContents) {
     var tags = core.findTags(htmlContents);
 
     core.replaceTags(htmlContents, tags, assetPath, function(result) {
