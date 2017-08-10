@@ -1,17 +1,10 @@
-var helpers = require('./src/helpers');
 var core = require('./src/core');
-var levin = {};
+var helpers = require('./src/helpers');
 
-module.exports = levin;
+module.exports = {
+  inline: async function(htmlFile, assetPath = '') {
+    const htmlContents = await helpers.readFile(htmlFile);
 
-levin.inline = function(htmlFile, assetPath, callback) {
-  var assetPath = assetPath || '';
-
-  helpers.readFile(htmlFile, function(htmlContents) {
-    var tags = core.findTags(htmlContents);
-
-    core.replaceTags(htmlContents, tags, assetPath, function(result) {
-      callback(result);
-    });
-  });
+    return core.replaceTags(htmlContents, assetPath);
+  }
 }
